@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+}
+
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #252525;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 1rem 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+}
+
+header .navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+header .nav_item {
+    margin: 0 8px;
+}
+
+header .nav_link {
+    padding: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+header .nav_link:hover {
+    background-color: rgba(0, 0, 255, 0.767);
+}
+
+header .close,
+header .open {
+    display: none;
+}
+
+header .logo {
+    color: white;
+}
+
+header .scwitchcont .switch {
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+header .scwitchcont .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+header .scwitchcont .switch.active {
+    background: orange;
+    color: #000;
+}
+
+header .scwitchcont .switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+header .scwitchcont .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.logo_nav img {
+    width: 45px;
+    height: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 48px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+
+    header .open {
+        display: inline;
+        color: white;
+        font-size: 24px;
+        z-index: 999;
+    }
+
+    header .open:hover {
+        color: rgba(0, 0, 255, 0.767);
+    }
+
+    header .close {
+        position: absolute;
+        right: 24px;
+        display: block;
+        font-size: 24px;
+    }
+
+    header .close:hover {
+        color: rgba(0, 0, 255, 0.767);
+    }
+
+    header .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #252525;
+        color: white;
+        width: 40%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 1000;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-radius: 0 0 0 50%;
+    }
+
+    header .navlist {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    header .nav_item {
+        margin: 2rem 0;
+    }
+
+    header .show {
+        right: 0;
+    }
+}
